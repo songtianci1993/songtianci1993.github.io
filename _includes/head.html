@@ -20,6 +20,15 @@
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:site_name" content="{{ site.title }}">
 
+<!--Load album-->
+{% if page.album %}
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+  <script src="{{ site.url }}/assets/js/galleria/galleria-1.4.2.min.js"></script>
+  <style>
+    .galleria{ width: 100%; height: 400px; background: #000 }
+  </style>
+{% endif %}
+
 {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
 {% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
 

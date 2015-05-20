@@ -10,21 +10,34 @@ image:
   credit: Eric Song
   creditlink: http://songtianci1993.github.io
 comments: true  
+album: true  
 ---
 
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
+# 老婆，我爱你
 
-# Heading 1
+## 老婆，我爱你
 
-## Heading 2
+### 老婆，我爱你
 
-### Heading 3
+#### 老婆，我爱你
 
-#### Heading 4
+##### 老婆，我爱你
 
-##### Heading 5
+###### 老婆，我爱你
 
-###### Heading 6
+{% for image in site.images limit:10 %} 
+  <li><article><a href="{{ site.url }}{{ image.url }}">dsdsdsds</article></li>
+{% endfor %}
+
+<div class="galleria">
+  {% for i in (1..10) limit:10 %} 
+    <img src="{{ site.url }}/images/album/image{{ i }}.jpg">
+  {% endfor %}
+            <img src="{{ site.url }}/images/3953273590_704e3899d5_m.jpg">
+            <img src="{{ site.url }}/images/mi_amor.jpg">
+            <img src="{{ site.url }}/images/avatar.jpg">
+</div>
 
 ### Body text
 

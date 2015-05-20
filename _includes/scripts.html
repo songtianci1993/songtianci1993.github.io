@@ -54,4 +54,20 @@
   })();
 </script>
 {% endif %}
+{% if page.album %}
+  <script>
+    Galleria.loadTheme('{{ site.url }}/assets/js/galleria/themes/classic/galleria.classic.min.js');
+    Galleria.configure({
+      autoplay: 2000,
+      transition: 'fade',
+      imageCrop: false,
+      carouselSpeed: 12000,
+      lightbox: true,
+      maxScaleRatio: 1,
+      imageCrop: 'height',
+      variation: 'light',
+    });
+    Galleria.run('.galleria');
+  </script>
+{% endif %}
 {% if site.disqus_shortname and page.comments %}{% include disqus_comments.html %}{% endif %}
